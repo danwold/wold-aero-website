@@ -12,7 +12,7 @@
 <img   src="logo1.jpg" /> 
 <hr>
 <div align="center">
-<table border="0" cellpadding="10">
+<table border="0"  cellpadding="1">
 <td><a href="/" style="text-decoration:none">about</a> 
 </td>
 <td>|</td>
