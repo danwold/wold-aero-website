@@ -19,6 +19,8 @@
 <td><a href="/service" style="text-decoration:none">services</td>
 <td>|</td>
 <td><a href="/contact" style="text-decoration:none">contact</td>
+<td>|</td>
+<td><a href="/portfolio" style="text-decoration:none">portfolio<s/td>
 </table>
 </div>
 <hr>
