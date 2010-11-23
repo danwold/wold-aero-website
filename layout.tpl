@@ -1,29 +1,30 @@
 <html>
 <title>Wold Aerospace Inc.</title>
-<font face="arial">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
 <table width ="800" border="0" cellpadding="10">
 
 <td width ="200">
-<br>
+
 </td>
 
 
 <td>
 <img   src="logo1.jpg" /> 
-<hr>
-<div align="center">
-<table border="0"  cellpadding="1">
-<td><a href="/" style="text-decoration:none">about</a> 
-</td>
-<td>|</td>
-<td><a href="/service" style="text-decoration:none">services</td>
-<td>|</td>
-<td><a href="/contact" style="text-decoration:none">contact</td>
-<td>|</td>
-<td><a href="/portfolio" style="text-decoration:none">portfolio<s/td>
-</table>
+
+<div id="navbar" align="center">
+
+<ul id="nav">
+<li><a href="/" style="text-decoration:none">about</a></li> 
+<li><a href="/service" style="text-decoration:none">services</a></li>
+<li><a href="/contact" style="text-decoration:none">contact</a></li>
+<li><a href="/portfolio" style="text-decoration:none">portfolio</a></li>
+</ul>
+
 </div>
-<hr>
+<br>
 
 <body>
 %include

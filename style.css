@@ -1,0 +1,33 @@
+body {
+	font:45% arial,sans-serif;
+	text-decoration:none
+}
+#navbar ul
+{
+	padding: .2em 0;
+	margin: 0;
+	list-style-type: none;
+	background-color: #080808;
+	color: #FFF;
+	width: 100%;
+	font: normal 90% arial, helvetica, sans-serif;
+	text-align: center;
+}
+
+li { display: inline; }
+
+li a
+{
+	text-decoration: none;
+	background-color: #080808;
+	color: #FFF;
+	padding: .2em 2.5em;
+	//padding:2.2em,2.2em,2.2em,2.2em;
+	border: 1px solid #80808;
+}
+
+li a:hover
+{
+	background-color: #202020;
+	color: #fff;
+}
