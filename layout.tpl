@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<table width ="800" border="0" cellpadding="10">
+<table  width ="800" border="0" cellpadding="10">
 
 <td width ="200">
 
@@ -25,7 +25,6 @@
 
 </div>
 <br>
-
 <body>
 %include
 </body>

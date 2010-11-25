@@ -1,6 +1,12 @@
 body {
 	font:45% arial,sans-serif;
-	text-decoration:none
+	text-decoration:none;
+	//border-style:solid ;
+}
+#bor {
+	border-style:solid;
+	border-width:3px;
+	padding : "10px";
 }
 #navbar ul
 {
@@ -12,6 +18,9 @@ body {
 	width: 100%;
 	font: normal 90% arial, helvetica, sans-serif;
 	text-align: center;
+	-moz-border-radius: 9;
+	-webkit-border-radius:9;
+
 }
 
 li { display: inline; }
