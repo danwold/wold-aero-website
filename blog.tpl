@@ -1,10 +1,12 @@
 %rebase layout
 
 %for f in blog:
+	<h1 style="font-size:70%">
        {{f.date}}
-       <br>
+	</h1>       
+	
        {{f.text}}
-<hr>
+	<hr>
 %end
 
 

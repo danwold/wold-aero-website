@@ -4,9 +4,22 @@ body {
 	//border-style:solid ;
 }
 #bor {
-	border-style:solid;
-	border-width:3px;
+	//border-style:solid;
+	border-width:1px;
 	padding : "10px";
+}
+
+#box
+ 
+{
+	border-style:solid;
+	-moz-border-radius: 9;
+	-webkit-border-radius:9;
+	padding:10px;
+}
+#services
+{
+	list-style-type:disc;
 }
 #navbar ul
 {
@@ -23,7 +36,7 @@ body {
 
 }
 
-li { display: inline; }
+#nav li { display: inline; }
 
 li a
 {
