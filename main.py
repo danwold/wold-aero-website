@@ -1,8 +1,8 @@
 from bottle import route, run, request, template, debug, static_file,redirect
-from time import *
+##from time import *
 import urllib
 import pickle
-
+from logweb import *
 global authenticated
 authenticated = False
 
@@ -49,6 +49,7 @@ def admin():
 	else:
 			
 		return template('login.tpl')
+
 @route('/add',method='GET')	
 def add():	
 	reply = ''
@@ -74,7 +75,11 @@ def add():
 @route('/blog')
 def blogthing():
 	return template('blog.tpl',blog=blog) 
-	
+
+##@route('/extractor')	
+##def ex():
+##	return logweb.mainpage()
+
 
 class post:
 	def __init__(self,date,text):
@@ -82,7 +87,7 @@ class post:
 		self.text = text
 class auth:
 	def __init__(self):
-		state = False
+		self.state = False
 
 
 try:

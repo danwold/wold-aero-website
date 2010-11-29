@@ -19,7 +19,6 @@
 <ul id="nav">
 <li><a href="/" style="text-decoration:none">about</a></li> 
 <li><a href="/service" style="text-decoration:none">services</a></li>
-<li><a href="/contact" style="text-decoration:none">contact</a></li>
 <li><a href="/portfolio" style="text-decoration:none">portfolio</a></li>
 <li><a href="/blog" style="text-deceration:none">news</a></li>
 </ul>

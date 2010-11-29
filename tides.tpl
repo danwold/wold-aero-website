@@ -1,4 +1,7 @@
 %rebase layout
+<p>
+The tide meter is currently down for maintainance - please check back later!
+</p>
 Live Hudson Tides
 <br>
 current level is 
