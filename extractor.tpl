@@ -1,5 +1,7 @@
-<form action="/" method="GET">
-<font face="arial">
+%rebase layout
+Logbook Pro Extractor 0.2
+<br>
+<form action="/extractor" method="GET">
 
 <table border="0" cellpadding="5">
 <tr>
@@ -14,7 +16,7 @@
 <tr>
 
 <td>
-<input type="submit" name="save" value="submit">
+<input type="submit" name="save3" value="submit">
 </td>
 
 <td>

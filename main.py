@@ -3,8 +3,6 @@ from bottle import route, run, request, template, debug, static_file,redirect
 import urllib
 import pickle
 from logweb import *
-global authenticated
-authenticated = False
 
 @route('/:filename')
 def send_image(filename):
@@ -76,9 +74,6 @@ def add():
 def blogthing():
 	return template('blog.tpl',blog=blog) 
 
-##@route('/extractor')	
-##def ex():
-##	return logweb.mainpage()
 
 
 class post:

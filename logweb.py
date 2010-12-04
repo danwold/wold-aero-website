@@ -1,8 +1,7 @@
 import pickle
 import datetime
 import csv
-from bottle import route, run, request, template, debug, static_file
-
+from bottle import request,route,template
 
 
 class airplane:
@@ -150,25 +149,22 @@ def rettimedelta(tdelta,inlist):
         if tdelta == 'all':
                 return inlist
 
-def retentrystr(dt):
-        for f in logbook:
-                if f.date == dt:
-                        entrylinereturn = []
-                        entrylinereturn.append(f.duration)
-                        entrylinereturn.append(f.aircraft.typ)
-                        entrylinereturn.append(f.date)
-                        return entrylinereturn
-                if f.date !=dt:
-                        return 'no date found'
+##def retentrystr(dt):
+##        ##TODO Seems to be source of the problem
+##	for f in logbook:
+##                if f.date == dt:
+##                        entrylinereturn = []
+##                        entrylinereturn.append(f.duration)
+##                        entrylinereturn.append(f.aircraft.typ)
+##                        entrylinereturn.append(f.date)
+##                        return entrylinereturn
+##                if f.date !=dt:
+##                        return 'no date found'
 
-	##@route('/')
-	##def anotherpage():
-	##	return template('main.tpl')
 
 @route('/extractor', method='GET')
 def mainpage():
 	logbook = []
-
 	fl = fleet()
 	aclist = fl.fleetlist()
 
@@ -184,14 +180,14 @@ def mainpage():
               	fl.search(r[1]),r[2],r[3],r[4],r[5],r[6],r[7],r[8],r[9],\
               	r[10],r[11],r[12],r[13],r[14],r[15],r[16],r[17],r[18],r[19],\
               	r[20],r[21],r[22],r[23])
-      	logbook.append(a)
+      		logbook.append(a)
+
 	fl.save()
 
 	acs = ''
 	text = ''
 	
-	if request.GET.get('save','').strip():
-		
+	if request.GET.get('save3','').strip():
 		##display string defaults
         	totalctl = 'duration'
         	tdctl = 'all'
@@ -208,6 +204,8 @@ def mainpage():
 		tdnum = request.GET.get('timetext','')
 
 		##account for different time data
+		if tdnum == '':
+			tdnum = 0
 		if tdunit == 'days':
 			tdctl = int(tdnum)
 		if tdunit == 'months':
@@ -223,13 +221,9 @@ def mainpage():
                 disptuple = rettotal(totalctl,rettypmatch(aircraftmatch,retclsmatch(classmatch,rettimedelta(tdctl,logbook))))
 
 		text = '{0} is {1}'.format(totalctl,disptuple)
-			
-		return template('lbp.tpl',text=text,aclist=aclist,acs=acs)		
-
+		return template('extractor.tpl',text=text,aclist=aclist,acs=acs)		
 	else:
-		acs = ''
-		return template('lbp.tpl',text=text,aclist=aclist,acs=acs)
-
+		return template('extractor.tpl',text=text,aclist=aclist,acs=acs)
 
 
 
